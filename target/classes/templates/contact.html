@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Contact page</title>
+    </head>
+    <body>
+        <h2 th:inline="text">your username: [[${#httpServletRequest.remoteUser}]]!</h2>
+        <p>Click <a th:href="@{/hellouser}">here</a> to get to hellouser page</p>        
+        <p>Click <a th:href="@{/home}">here</a> to get to home page</p>
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>

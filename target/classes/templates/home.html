@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head><title>Home Page</title></head>
+<body>
+<h1>Hello !</h1>
+<p>Welcome to <span th:text="${appName}"></span> !</p>
+<p>Click <a th:href="@{/login}">here</a> to login</p>
+<p>And click <a th:href="@{/another}">right here</a> if you want to see another page of our app</p>
+<h3><a th:href="@{/books}">List of all books</a></h3>
+<h3><a th:href="@{/h2-console}">H2 DB Console</a></h3>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Spring Security Example</title>
+</head>
+<body>
+<p>Welcome to <span th:text="${appName}">Our App</span></p>
+<div th:if="${param.error}">
+    Invalid username and password.
+</div>
+<div th:if="${param.logout}">
+    You have been logged out.
+</div>
+<form th:action="@{/login}" method="post">
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <div><input type="submit" value="Sign In"/></div>
+</form>
+</body>
+</html>
+
+<html>
+<head><title>Home Page</title></head>
+<body>
+    <h1>Hello <b> <c:out value="${pageContext.request.remoteUser}"/></b> </h1>
+
+        <form action="/logout" method="post">
+
+            <input type="submit" value="Sign Out"/>
+
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+
+        </form>
+</body>
+</html>
+
+-->
+
+
+        

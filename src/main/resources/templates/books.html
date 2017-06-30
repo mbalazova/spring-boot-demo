@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head><title>Home Page</title></head>
+<body>
+<h1>List of all books</h1>
+	<p th:each="book : ${books}">
+		<h4>ID:</h4>
+		<div th:text="${book.ID}"></div>
+		<h4>Title:</h4>
+		<div th:text="${book.TITLE}"></div>
+		<h4>Author:</h4>
+		<div th:text="${book.AUTHOR}"></div>
+		<div>---------------------------------------------------------</div>
+	</p>
+</body>
+</html>
+
