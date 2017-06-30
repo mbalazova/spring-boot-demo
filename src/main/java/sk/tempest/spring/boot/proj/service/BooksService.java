@@ -1,18 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package sk.tempest.spring.boot.proj.service;
 
 import java.util.List;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import sk.tempest.spring.boot.proj.entity.Book;
+import sk.tempest.spring.boot.proj.repo.BooksRepository;
 
-public interface BooksService extends CrudRepository<Book, Long>{
+public interface BooksService {
     
-    List<Book> findAll(); 
-    List<Book> findByTitle(String title);
-    Book findOne(Long id);
+    List<Book> findAllBooks(); 
+    List<Book> findBookByTitle(String title);
+    Book findOneBook(Long id);
+    Book saveBook(Book book);
+    void deleteBook(Long id);
     
 }

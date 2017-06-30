@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@EnableJpaRepositories("sk.tempest.spring.boot.proj.service")
+@EnableJpaRepositories("sk.tempest.spring.boot.proj.repo")
 @EntityScan("sk.tempest.spring.boot.proj.entity")
 @SpringBootApplication
 public class Runner {
