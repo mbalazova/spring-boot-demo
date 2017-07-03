@@ -15,4 +15,12 @@ public class BookIdMismatchException extends RuntimeException{
         super();
     }
     
+    public BookIdMismatchException(String message) {
+        super(message);
+    }
+    
+    public BookIdMismatchException(Throwable cause) {
+        super(cause);
+    }
+    
 }
